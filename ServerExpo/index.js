@@ -9,7 +9,10 @@ const cors = require("cors");
 //Middlewares
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:'https://expo-app-ui.vercel.app/',
+  
+}));
 
 // Db Connection
 
