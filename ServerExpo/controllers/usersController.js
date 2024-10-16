@@ -2,7 +2,8 @@ const { Users } = require("../models/userModel");
 
 
 async function userRegistration(req,res) {
-    const {name, email, password} = req.body;
+    console.log("vercel request", req.body)
+ /*   const {name, email, password} = req.body;
     if(!name || !password || !email){
         return res.status(400).send({message:"All the Fields are required"})
     }
@@ -15,7 +16,9 @@ async function userRegistration(req,res) {
         return res.status(200).json({message:'User Created Successfully',  newUser})
     } catch (err) {
         return res.status(500).json({message: 'error Occured In the User Creation', error:err})
-    }
+    } */
+        res.status(200).json({ message: 'Signup route is working' });
+
     
 }
 
