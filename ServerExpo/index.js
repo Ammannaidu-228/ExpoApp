@@ -9,13 +9,11 @@ const cors = require("cors");
 //Middlewares
 
 app.use(express.json());
-const corsOptions = {
-  origin: 'https://expo-app-ui.vercel.app', // Your frontend domain
+app.use(cors({
+  origin: 'https://expo-app-ui.vercel.app', // Your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
-app.use(cors(corsOptions));
+}));
 
 // Db Connection
 
