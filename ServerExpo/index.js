@@ -10,8 +10,8 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors({
-  origin:'https://expo-app-ui.vercel.app/',
-  
+  origin:'https://expo-app-ui.vercel.app',
+
 }));
 
 // Db Connection
