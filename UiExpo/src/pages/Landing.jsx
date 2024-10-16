@@ -12,14 +12,22 @@ function Landing() {
       email: form.get("email"),
       password: form.get("password"),
     };
-    console.log(formData);
-    axios
-      .post("https://expo-app-server.vercel.app/user/signup", formData)
-      .then((res) => {
-        console.log(res.data);
-        data.reset();
-      })
-      .catch((err) => console.log(err));
+    
+    axios.post(
+      "https://expo-app-server.vercel.app/user/signup",
+      JSON.stringify(formData),
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+    .then((res) => {
+      console.log(res.data);
+      form.reset(); // If form is a form element
+    })
+    .catch((err) => console.log(err));
+    
   };
   return (
     <div className="CompleteLanding container-fluid p-5">
