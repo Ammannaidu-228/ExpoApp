@@ -14,7 +14,7 @@ function Landing() {
     };
     console.log(formData);
     axios
-      .post("https://expo-app-server.vercel.app/?vercelToolbarCode=rwURMltBL59dWcV/user/signup", formData)
+      .post("https://expo-app-server.vercel.app/user/signup", formData)
       .then((res) => {
         console.log(res.data);
         data.reset();
