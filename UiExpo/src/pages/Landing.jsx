@@ -5,6 +5,7 @@ import "../styles/Landing.css";
 import { useState } from "react";
 function Landing() {
   const [backendResponce, setBackendResponce] = useState("");
+  const [formResponce, setFormResponce] = useState("");
   const handleButtonSubmission = () => {
     axios
       .get("https://expo-app-server.vercel.app/test")
@@ -24,7 +25,7 @@ function Landing() {
 
     axios
       .post(
-        "https://expo-app-server.vercel.app/user/signup",
+        "http://localhost:3000/user/signup",
         JSON.stringify(formData),
         {
           headers: {
@@ -34,6 +35,7 @@ function Landing() {
       )
       .then((res) => {
         console.log(res.data);
+        setFormResponce(res.data?.message)
         form.reset(); // If form is a form element
       })
       .catch((err) => console.log(err));
@@ -83,6 +85,7 @@ function Landing() {
             <Button variant="primary" type="submit">
               Register
             </Button>
+            <p className="mt-3 text-center">{formResponce}!!!</p>
           </Form>
         </div>
       </div>
