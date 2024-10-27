@@ -9,22 +9,30 @@ const cors = require("cors");
 //Middlewares
 
 app.use(express.json());
-app.use(cors({
+app.use(cors())
+/*app.use(cors({
   origin: 'https://expo-app-ui.vercel.app', // Your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
+*/
 // Db Connection
 
 mongoose
-  .connect(process.env.DB_URL)
+  .connect(process.env.DB_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000
+  })
   .then(() => console.log("Db Connection established"))
   .catch((error) => console.log(error));
 
 app.get("/", (req, res) => {
   res.status(200).send({ message: "Backend Server Started!!! Ready With Ui" });
 });
+app.get('/test', (req,res)=>{
+  res.status(200).send({message:'Backend connection working after deployment'})
+})
 app.use("/user", userRoutes);
 
 app.listen(port, () =>
