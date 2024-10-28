@@ -26,13 +26,13 @@ function MainNav() {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
+                  <Nav.Link href="#action2">About</Nav.Link>
                   <NavDropdown
                     title="Sign in"
                     id={`offcanvasNavbarDropdown-expand-sm`}
                   >
                     <NavDropdown.Item as={Link} to={'/signin'}>Log in</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item as={Link} to={'/signup'} >
                       Register
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -48,7 +48,7 @@ function MainNav() {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button variant="outline-dark">Search</Button>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
