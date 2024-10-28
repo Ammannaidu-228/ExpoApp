@@ -4,3 +4,30 @@
     height: 100vh;
     margin: 0;
 }
+.carousel-container {
+  width: 100%;
+}
+
+
+@media (min-width: 344px) { /* Medium screens and up */
+    .carousel-container {
+      max-width: 100%;
+    }
+  }
+@media (min-width: 768px) { /* Medium screens and up */
+  .carousel-container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) { /* Large screens and up */
+  .carousel-container {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) { /* Extra-large screens and up */
+  .carousel-container {
+    max-width: 100%;
+  }
+}

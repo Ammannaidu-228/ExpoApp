@@ -9,7 +9,7 @@ function Landing() {
       <div className="CompleteLanding">
         <MainNav />
         <div className="row justify-content-center ">
-          <div className="col-12 col-sm-9 col-md-8 col-lg-6">
+          <div className="carousel-container col-12 col-md-10 col-lg-8">
           <MainCarousel/>
           </div>
         </div>
