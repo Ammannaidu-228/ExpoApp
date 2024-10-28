@@ -5,6 +5,7 @@ import "../styles/Landing.css";
 import { useState } from "react";
 import MainNav from "../components/MainNav";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 function Signin() {
   const [backendResponce, setBackendResponce] = useState("");
   const [formResponce, setFormResponce] = useState("");
@@ -74,12 +75,21 @@ function Signin() {
                 placeholder="Password"
               />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" className="mb-3" type="submit">
               Sign in
             </Button>
+            <div className="row justify-content-center" >
+                <div className="col-12 col-sm-9 col-md-8 col-lg-6">
+                <p>Don&apos;t have an account? <Link to={'/signup'}> Create One</Link></p>
+                <p className="text-danger text-center">Forget Password</p>
+
+                </div>
+
+            </div>
             {formResponce != "" && (
               <p className="mt-3 text-center">{formResponce}!!!</p>
             )}
+            
           </Form>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import "../styles/signup.css";
 import MainNav from "../components/MainNav";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 function Signup() {
   return (
     <div>
@@ -43,9 +44,12 @@ function Signup() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Password" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" className="mb-3" type="submit">
               Submit
             </Button>
+            <div className="m-auto">
+                <p>Already have an account? <Link to={'/signin'}>Sign in</Link></p>
+            </div>
           </Form>
         </div>
       </div>

@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 function MainNav() {
   return (
     <div>
-        <Navbar expand='sm'  className="bg-body-tertiary mb-3">
+        <Navbar expand='sm'  className="bg-body-tertiary">
           <Container fluid>
             <Navbar.Brand as={Link} to='/'>Mern Expo</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
@@ -25,8 +25,8 @@ function MainNav() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">About</Nav.Link>
+                  <Nav.Link as={Link} to={'/'}>Home</Nav.Link>
+                  <Nav.Link as={Link} to={'/about'}>About</Nav.Link>
                   <NavDropdown
                     title="Sign in"
                     id={`offcanvasNavbarDropdown-expand-sm`}
