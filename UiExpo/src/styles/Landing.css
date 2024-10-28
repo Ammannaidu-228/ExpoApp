@@ -1,7 +1,7 @@
 .CompleteLanding{
     background-color:#636e72 ;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 .carousel-container {
@@ -30,4 +30,9 @@
   .carousel-container {
     max-width: 100%;
   }
+}
+.formStyle{
+    border-radius: 1.5rem;
+    border-color: rgb(43, 220, 226);
+    border-width: .2rem;
 }

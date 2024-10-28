@@ -1,6 +1,13 @@
 .completeComp{
     background-color:#636e72 ;
     width: 100%;
-    height: 100vh;
+    min-height: 130vh;
     margin: 0;
+}
+.card-style{
+    background-color: #7f8b8f;
+    border-radius: 2.5rem;
+    border-color: rgb(255, 94, 0);
+    border-width: .1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
